@@ -1,0 +1,19 @@
+# CHEAT MENU TEMPLATE
+.method public static showCheatMenu()V
+    .registers 3
+    # Khởi tạo giao diện Menu cơ bản
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+    move-object v1, p0
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    const-string v1, "AI Mod Menu"
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    
+    # Thêm các nút chức năng
+    const-string v1, "Unlock All"
+    new-instance v2, Lcom/mod/MenuAction;
+    invoke-direct {v2}, Lcom/mod/MenuAction;-><init>()V
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+    return-void
+.end method

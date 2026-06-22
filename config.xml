@@ -1,0 +1,7 @@
+<config>
+    <target_app_name>com.example.game</target_app_name>
+    <mod_version>1.0</mod_version>
+    <working_directory>/sdcard/ModdingOutput/</working_directory>
+    <auto_mode>true</auto_mode>
+</config>
+
